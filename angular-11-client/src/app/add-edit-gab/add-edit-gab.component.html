@@ -1,0 +1,41 @@
+<form [formGroup]="gabForm" (ngSubmit)="onFormSubmit()">
+
+    <div> <h2>Formulaire</h2></div>  
+       <div class="row">
+         <div class="texte1">
+            <mat-form-field appearance="outline"> <mat-label>Désignation</mat-label>
+                <input matInput type="text" placeholder="ex : abc" formControlName="Désignation"  required />
+             </mat-form-field>
+           </div>
+           <div class="texte2">
+               <mat-form-field appearance="outline"> <mat-label>Fonction</mat-label>
+                   <input matInput type="text"placeholder="ex : ben foulen " formControlName="Fonction"  required /> 
+               </mat-form-field>
+           </div>
+       </div>
+       <div class="clearfix"></div>
+       <div class="row">
+           
+          
+          
+       </div>
+       <div class="clearfix"></div>
+       <div class="row">
+               <div class="texte1">
+                   <mat-form-field appearance="outline"> <mat-label>id</mat-label>
+                       <input matInput type="tel" placeholder="ex : ****  " formControlName="id"  required />
+                   </mat-form-field>
+               </div>
+               <div class="row">
+                <div  mat-dialog-actions class="action">
+                    <button mat-raised-button type="submit" color="primary">{{data? 'update' : 'Enregistrer'}}</button>
+                    <button mat-raised-button type="button" [mat-dialog-close]="false">Annuler</button>
+                 </div>
+                </div>
+           </div>
+        
+               
+            
+   
+          
+   </form>
